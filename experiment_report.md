@@ -1,19 +1,17 @@
 # Experiment Report: Data Quality Impact on AI Agent
 
-**Student ID:** AI20K-XXXX
-**Name:** (Dien ten cua ban)
-**Date:** (Dien ngay thuc hien)
+**Student ID:** 2A202600899
+**Name:** Nguyen Hoang Lan
+**Date:** 10/06/2026
 
 ---
 
 ## 1. Ket qua thi nghiem
 
-Chay `agent_simulation.py` voi 2 bo du lieu va ghi lai ket qua:
-
 | Scenario | Agent Response | Accuracy (1-10) | Notes |
 |----------|----------------|-----------------|-------|
-| Clean Data (`processed_data.csv`) | (Ghi cau tra loi cua Agent) | | |
-| Garbage Data (`garbage_data.csv`) | (Ghi cau tra loi cua Agent) | | |
+| Clean Data (`processed_data.csv`) | Agent tra loi dung san pham co gia tri cao nhat trong nhom Electronics | 9/10 | Du lieu sach, khong loi |
+| Garbage Data (`garbage_data.csv`) | Agent bi anh huong boi gia tri bat thuong va du lieu sai dinh dang | 3/10 | Co outlier, null va duplicate |
 
 ---
 
@@ -21,15 +19,14 @@ Chay `agent_simulation.py` voi 2 bo du lieu va ghi lai ket qua:
 
 ### Tai sao Agent tra loi sai khi dung Garbage Data?
 
-(Viet nhan xet cua ban o day — it nhat 50 tu)
-
-(Hay phan tich cac van de nhu Duplicate IDs, wrong data types, outliers, null values
-va giai thich tai sao chung anh huong den ket qua cua Agent.)
+Garbage Data chua nhieu van de nhu duplicate records, gia tri am, gia tri rong, sai kieu du lieu va outlier. Khi Agent doc du lieu nay, cac gia tri bat thuong co the duoc xem la hop le va anh huong truc tiep den qua trinh suy luan. Vi du gia TV Premium = 999999999 co the lam Agent lua chon sai san pham. Du lieu rong hoac sai dinh dang cung co the gay loi trong qua trinh loc va tong hop thong tin. Dieu nay cho thay chat luong du lieu co tac dong rat lon den ket qua cua AI.
 
 ---
 
 ## 3. Ket luan
 
-**Quality Data > Quality Prompt?** (Dong y hay khong? Giai thich ngan gon.)
+**Quality Data > Quality Prompt?**
 
-(Viet ket luan cua ban o day)
+Dong y.
+
+Du prompt duoc viet rat tot, Agent van khong the dua ra cau tra loi chinh xac neu du lieu dau vao sai hoac khong day du. Chat luong du lieu la nen tang cua moi he thong AI va Data Pipeline.
